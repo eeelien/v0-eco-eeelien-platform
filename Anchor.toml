@@ -1,0 +1,22 @@
+[toolchain]
+package_manager = "yarn"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+ecobottle = "GhaBgqop1A6NxguXHRsBJntBxj5QMB73NEKM46WX6kQb"
+
+[programs.devnet]
+ecobottle = "GhaBgqop1A6NxguXHRsBJntBxj5QMB73NEKM46WX6kQb"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[registry]
+url = "https://api.apr.dev"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 \"tests/**/*.ts\""
