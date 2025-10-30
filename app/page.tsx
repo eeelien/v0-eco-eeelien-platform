@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { WalletButton } from "@/components/wallet-button"
 import { Recycle, Smartphone, Trophy, Leaf, Users, TrendingUp } from "lucide-react"
 
 export default function HomePage() {
@@ -21,10 +22,16 @@ export default function HomePage() {
             <Link href="#partners" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Aliados
             </Link>
+            <Link href="/exchange" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Intercambio
+            </Link>
           </div>
-          <Link href="/dashboard">
-            <Button>Abrir App</Button>
-          </Link>
+          <div className="flex items-center gap-3">
+            <WalletButton />
+            <Link href="/dashboard">
+              <Button variant="outline">Abrir App</Button>
+            </Link>
+          </div>
         </div>
       </nav>
 
